@@ -47,7 +47,9 @@ def batch_quat_to_rotmat(q, out=None):
     out[:, 2, 2] = (1 - (h[:, 1, 1] + h[:, 2, 2]).mul(s))#.mul(s_)
 
     return out, s_
-    
+
+    #  扩增 - 旋转器
+    #  形状变换
 class Augmentor_Rotation(nn.Module):
     def __init__(self,dim):
         super(Augmentor_Rotation, self).__init__()
@@ -56,6 +58,7 @@ class Augmentor_Rotation(nn.Module):
         self.fc3 = nn.Linear(256, 4)
         self.bn1 = nn.BatchNorm1d(512)
         self.bn2 = nn.BatchNorm1d(256)
+
 
     def forward(self, x):
         B = x.size()[0]
@@ -78,7 +81,8 @@ class Augmentor_Rotation(nn.Module):
         s = s.view(B, 1, 1)
         return x, None
 
-
+  #  扩增 - 位移
+  #  点位移
 class Augmentor_Displacement(nn.Module):
     def __init__(self, dim):
         super(Augmentor_Displacement, self).__init__()
@@ -102,7 +106,7 @@ class Augmentor_Displacement(nn.Module):
 
         return x
 
-
+#扩增器，内部包含两种扩增策略
 class Augmentor(nn.Module):
     def __init__(self,dim=1024,in_dim=3):
         super(Augmentor, self).__init__()
@@ -116,6 +120,7 @@ class Augmentor(nn.Module):
         self.bn3 = nn.BatchNorm1d(128)
         self.bn4 = nn.BatchNorm1d(1024)
 
+        #对于一个输入的模型，扩增器分别进行形状变换、点位移变换
         self.rot = Augmentor_Rotation(self.dim)
         self.dis = Augmentor_Displacement(self.dim)
 
