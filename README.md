@@ -1,3 +1,4 @@
+
 # PointAugment: an Auto-Augmentation Framework for Point Cloud Classification
 
 This repository contains a PyTorch implementation of the paper:
@@ -52,3 +53,7 @@ If you find our work useful in your research, please consider citing:
   year={2020}
 }
 ```
+=======
+# tool-PointAugment
+An exploration on automated testing. Source code are from  https://github.com/liruihui/PointAugment/.
+>>>>>>> 9c0872046670aa3ba2bcea07bf5944bde3e2dc7c
