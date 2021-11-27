@@ -1,0 +1,12 @@
+2021-11-25 05:52:22,678 - CLS - INFO - PARAMETER ...
+2021-11-25 05:52:22,678 - CLS - INFO - Namespace(augment=False, batch_size=2, data_dir='modelnet40_ply_hdf5_2048', decay_rate=0.0001, epoch=250, epoch_per_save=5, learning_rate=0.001, learning_rate_a=0.001, log_dir='log\\pointnet_cls\\20211125-0552', lr_decay=0.5, model_name='pointnet', no_decay=False, noise_dim=1024, num_points=1024, optimizer='Adam', pretrain=None, restore=False, use_normal=False, y_rotated=True)
+2021-11-25 05:52:22,683 - CLS - INFO - Load dataset ...
+2021-11-25 05:52:27,248 - CLS - INFO - The number of training data is: 9840
+2021-11-25 05:52:27,249 - CLS - INFO - The number of test data is: 2468
+2021-11-25 05:52:29,932 - CLS - INFO - Start training...
+2021-11-25 05:52:29,933 - CLS - INFO - Epoch 1 (1/250):
+2021-11-25 06:13:47,451 - CLS - INFO - CLS Loss: 8.24
+2021-11-25 06:13:47,451 - CLS - INFO - AUG Loss: 4.67
+2021-11-25 06:13:47,453 - CLS - INFO - Train Accuracy: 0.090346
+2021-11-25 06:13:47,454 - CLS - INFO - Test Accuracy: 0.040519
+2021-11-25 06:13:47,461 - CLS - INFO - Epoch 2 (2/250):

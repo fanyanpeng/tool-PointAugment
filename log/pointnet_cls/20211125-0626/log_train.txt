@@ -1,0 +1,59 @@
+2021-11-25 06:26:49,615 - CLS - INFO - PARAMETER ...
+2021-11-25 06:26:49,616 - CLS - INFO - Namespace(augment=False, batch_size=8, data_dir='modelnet40_ply_hdf5_2048', decay_rate=0.0001, epoch=10, epoch_per_save=5, learning_rate=0.001, learning_rate_a=0.001, log_dir='log\\pointnet_cls\\20211125-0626', lr_decay=0.5, model_name='pointnet', no_decay=False, noise_dim=64, num_points=64, optimizer='Adam', pretrain=None, restore=False, use_normal=False, y_rotated=True)
+2021-11-25 06:26:49,620 - CLS - INFO - Load dataset ...
+2021-11-25 06:26:54,579 - CLS - INFO - The number of training data is: 9840
+2021-11-25 06:26:54,579 - CLS - INFO - The number of test data is: 2468
+2021-11-25 06:26:57,328 - CLS - INFO - Start training...
+2021-11-25 06:26:57,329 - CLS - INFO - Epoch 1 (1/10):
+2021-11-25 06:30:36,928 - CLS - INFO - CLS Loss: 5.61
+2021-11-25 06:30:36,929 - CLS - INFO - AUG Loss: 3.43
+2021-11-25 06:30:36,929 - CLS - INFO - Train Accuracy: 0.385874
+2021-11-25 06:30:36,930 - CLS - INFO - Test Accuracy: 0.276337
+2021-11-25 06:30:36,933 - CLS - INFO - Epoch 2 (2/10):
+2021-11-25 06:34:24,859 - CLS - INFO - CLS Loss: 4.97
+2021-11-25 06:34:24,860 - CLS - INFO - AUG Loss: 3.14
+2021-11-25 06:34:24,860 - CLS - INFO - Train Accuracy: 0.444512
+2021-11-25 06:34:24,861 - CLS - INFO - Test Accuracy: 0.347245
+2021-11-25 06:34:24,861 - CLS - INFO - Epoch 3 (3/10):
+2021-11-25 06:38:32,450 - CLS - INFO - CLS Loss: 5.58
+2021-11-25 06:38:32,451 - CLS - INFO - AUG Loss: 3.39
+2021-11-25 06:38:32,451 - CLS - INFO - Train Accuracy: 0.587398
+2021-11-25 06:38:32,451 - CLS - INFO - Test Accuracy: 0.536467
+2021-11-25 06:38:32,453 - CLS - INFO - Epoch 4 (4/10):
+2021-11-25 06:42:41,074 - CLS - INFO - CLS Loss: 4.09
+2021-11-25 06:42:41,075 - CLS - INFO - AUG Loss: 2.76
+2021-11-25 06:42:41,075 - CLS - INFO - Train Accuracy: 0.678252
+2021-11-25 06:42:41,076 - CLS - INFO - Test Accuracy: 0.628039
+2021-11-25 06:42:41,078 - CLS - INFO - Epoch 5 (5/10):
+2021-11-25 06:47:18,910 - CLS - INFO - CLS Loss: 4.44
+2021-11-25 06:47:18,911 - CLS - INFO - AUG Loss: 2.91
+2021-11-25 06:47:18,913 - CLS - INFO - Train Accuracy: 0.736077
+2021-11-25 06:47:18,915 - CLS - INFO - Test Accuracy: 0.708266
+2021-11-25 06:47:18,917 - CLS - INFO - Epoch 6 (6/10):
+2021-11-25 06:51:06,302 - CLS - INFO - CLS Loss: 4.02
+2021-11-25 06:51:06,303 - CLS - INFO - AUG Loss: 2.73
+2021-11-25 06:51:06,303 - CLS - INFO - Train Accuracy: 0.717480
+2021-11-25 06:51:06,303 - CLS - INFO - Test Accuracy: 0.682334
+2021-11-25 06:51:06,303 - CLS - INFO - Epoch 7 (7/10):
+2021-11-25 06:54:53,453 - CLS - INFO - CLS Loss: 4.35
+2021-11-25 06:54:53,454 - CLS - INFO - AUG Loss: 2.88
+2021-11-25 06:54:53,454 - CLS - INFO - Train Accuracy: 0.775711
+2021-11-25 06:54:53,454 - CLS - INFO - Test Accuracy: 0.748784
+2021-11-25 06:54:53,455 - CLS - INFO - Epoch 8 (8/10):
+2021-11-25 06:57:50,882 - CLS - INFO - CLS Loss: 3.82
+2021-11-25 06:57:50,883 - CLS - INFO - AUG Loss: 2.63
+2021-11-25 06:57:50,883 - CLS - INFO - Train Accuracy: 0.783740
+2021-11-25 06:57:50,884 - CLS - INFO - Test Accuracy: 0.739870
+2021-11-25 06:57:50,884 - CLS - INFO - Epoch 9 (9/10):
+2021-11-25 07:00:45,217 - CLS - INFO - CLS Loss: 3.77
+2021-11-25 07:00:45,218 - CLS - INFO - AUG Loss: 2.61
+2021-11-25 07:00:45,218 - CLS - INFO - Train Accuracy: 0.707520
+2021-11-25 07:00:45,219 - CLS - INFO - Test Accuracy: 0.669773
+2021-11-25 07:00:45,219 - CLS - INFO - Epoch 10 (10/10):
+2021-11-25 07:03:39,075 - CLS - INFO - CLS Loss: 4.68
+2021-11-25 07:03:39,076 - CLS - INFO - AUG Loss: 3.01
+2021-11-25 07:03:39,077 - CLS - INFO - Train Accuracy: 0.792886
+2021-11-25 07:03:39,077 - CLS - INFO - Test Accuracy: 0.756483
+2021-11-25 07:03:39,079 - CLS - INFO - Best Accuracy: 0.000000
+2021-11-25 07:03:39,079 - CLS - INFO - End of training...
+2021-11-25 07:03:39,080 - CLS - INFO - log\pointnet_cls\20211125-0626

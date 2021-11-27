@@ -1,0 +1,1 @@
+python train_PA.py --data_dir modelnet40_ply_hdf5_2048
