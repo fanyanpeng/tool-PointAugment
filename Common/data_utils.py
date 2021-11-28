@@ -36,6 +36,7 @@ def angle_axis(angle: float, axis: np.ndarray):
     # yapf: enable
     return R.float()    
 
+#添加旋转
 class PointcloudRotatebyAngle(object):
     def __init__(self, rotation_angle = 0.0):
         self.rotation_angle = rotation_angle
@@ -79,6 +80,7 @@ class PointcloudJitter_batch(object):
             
         return pc
 
+#添加抖动
 class PointcloudJitter(object):
     def __init__(self, std=0.01, clip=0.05):
         self.std, self.clip = std, clip

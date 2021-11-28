@@ -9,6 +9,7 @@ warnings.filterwarnings('ignore')
 from torchvision import transforms
 
 
+#加载数据集
 def load_data(dir,partition="train"):
 
     all_data = []

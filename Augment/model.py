@@ -32,8 +32,10 @@ torch.manual_seed(manualSeed)
 
 
 class Model:
+    #新建模型，传入参数
     def __init__(self, opts):
         self.opts = opts
+        #备份文件
         self.backup()
         self.set_logger()
 
@@ -62,12 +64,11 @@ class Model:
         file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(formatter)
         self.logger.addHandler(file_handler)
-
+#开始训练
     def train(self):
-
         self.log_string('PARAMETER ...')
         self.log_string(self.opts)
-        with open(os.path.join(self.opts.log_dir, 'args.txt'), 'w') as log:
+        with open(os.path.join(self.opts.log_dir, 'args.txt'), 'w') as log: #存参数，用于查验
             for arg in sorted(vars(self.opts)):
                 log.write(arg + ': ' + str(getattr(self.opts, arg)) + '\n')  # log of arguments
         writer = SummaryWriter(logdir=self.opts.log_dir)
@@ -161,6 +162,7 @@ class Model:
 
                 pred_pc, pc_tran, pc_feat = classifier(points)
                 pred_aug, aug_tran, aug_feat = classifier(aug_pc)
+                # 计算loss
                 augLoss  = loss_utils.aug_loss(pred_pc, pred_aug, target, pc_tran, aug_tran, ispn=ispn)
 
                 augLoss.backward(retain_graph=True)
@@ -174,12 +176,14 @@ class Model:
                 optimizer_c.step()
 
 
+
             train_acc = self.eval_one_epoch(classifier.eval(), trainDataLoader)
             test_acc = self.eval_one_epoch(classifier.eval(), testDataLoader)
 
             self.log_string('CLS Loss: %.2f'%clsLoss.data)
             self.log_string('AUG Loss: %.2f'%augLoss.data)
 
+            #打印准确性
             self.log_string('Train Accuracy: %f' % train_acc)
             self.log_string('Test Accuracy: %f'%test_acc)
          

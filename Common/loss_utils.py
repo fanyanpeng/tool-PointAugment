@@ -17,7 +17,7 @@ import torch.nn.functional as F
 NUM = 1.2#2.0
 W = 1.0#10.0
 
-
+#计算loss
 def cal_loss_raw(pred, gold):
     ''' Calculate cross entropy loss, apply label smoothing if needed. '''
 

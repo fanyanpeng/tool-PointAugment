@@ -7,6 +7,8 @@
 
 import numpy as np
 
+#对点云数据进行多样化的改变，以达到扩充多样性的目的
+
 def nonuniform_sampling(num = 4096, sample_num = 1024):
     sample = set()
     loc = np.random.rand()*0.8+0.1
@@ -169,6 +171,7 @@ def rotate_perturbation_point_cloud(pc, angle_sigma=0.06, angle_clip=0.18):
 
     return pc
 
+#二维的旋转
 def rotate_2D_point_cloud(pc, angle_sigma=0.06, angle_clip=0.18):
     """ Randomly perturb the point clouds by small rotations
         Input:
@@ -186,6 +189,7 @@ def rotate_2D_point_cloud(pc, angle_sigma=0.06, angle_clip=0.18):
 
     return pc
 
+#二维缩放点云
 def scale_2D_point_cloud(pc, scale_low=0.95, scale_high=1.05):
     """ Randomly scale the point cloud. Scale is per point cloud.
         Input:
@@ -199,6 +203,7 @@ def scale_2D_point_cloud(pc, scale_low=0.95, scale_high=1.05):
 
     return pc
 
+#高斯处理样本
 def guass_noise_point_cloud(batch_data, sigma=0.005, mu=0.00):
     """ Add guassian noise in per point.
         Input:
@@ -209,6 +214,8 @@ def guass_noise_point_cloud(batch_data, sigma=0.005, mu=0.00):
     batch_data += np.random.normal(mu, sigma, batch_data.shape)
     return batch_data
 
+
+#将点云数据通过矩阵运算旋转
 def rotate_point_cloud_by_angle(self, data, rotation_angle):
     """
     Rotate the point cloud along up direction with certain angle.
