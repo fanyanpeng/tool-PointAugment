@@ -1,1 +1,16 @@
-python train_PA.py --data_dir modelnet40_ply_hdf5_2048
+用conda创建python3.6环境：conda activate PointAugment
+
+用conda进入当前环境：conda activate PointAugment
+
+用conda配置环境：conda install pytorch=1.2.0 torchvision cudatoolkit=10.0 -c pytorch -y
+
+输入数据下载：https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip
+
+数据
+
+开始训练：python train_PA.py --data_dir modelnet40_ply_hdf5_2048
+
+打开tensorboard可视化训练结果：tensorboard --logdir="C:\Users\fanya\Desktop\PointAugment-master\log\pointnet_cls"
+
+
+
